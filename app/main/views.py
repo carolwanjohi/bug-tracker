@@ -1,5 +1,6 @@
 from flask import render_template,request,redirect,url_for,abort
 from . import main
+from ..requests import projects
 
 # Views
 @main.route('/')
@@ -10,7 +11,8 @@ def index():
     '''
 
     title = 'Home'
+    projects_found = projects()
 
-    return render_template('index.html', title = title )
+    return render_template('index.html', title = title, projects = projects_found )
    
 

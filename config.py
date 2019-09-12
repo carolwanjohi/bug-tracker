@@ -4,7 +4,8 @@ class Config:
     '''
     General configuration parent class
     '''
-    pass
+    PIVOTAL_BASE_URL = 'https://www.pivotaltracker.com/services/v5/projects/{}'
+    API_TOKEN = os.environ.get('TOKEN')
 
 class ProdConfig(Config):
     '''
