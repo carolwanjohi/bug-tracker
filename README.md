@@ -24,7 +24,7 @@ pip install -r requirements.txt
 * create script for starting the application
 ```
 Create the script: touch start.sh
-Add in the script: python3.6 run.py server
+Add in the script: python3.6 manage.py server
 Make script executable: chmod a+x start.sh
 Run the script to start the app: ./start.sh 
 ```
