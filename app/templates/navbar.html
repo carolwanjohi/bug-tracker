@@ -2,9 +2,13 @@
 
 <!-- Navbar block -->
 {% block navbar %}
-    <div class="container-fluid">
+    <head>
+        <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/index.css') }}">
+    </head>
+    
+    <div class="container-fluid off-white-shade">
 
-        <div class="navbar navbar-inverse" role="navigation" >
+        <div class="navbar" role="navigation" >
 
             <div class="container">
 
