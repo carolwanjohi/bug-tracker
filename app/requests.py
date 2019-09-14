@@ -16,8 +16,16 @@ def configure_request(app):
     base_url = app.config['PIVOTAL_BASE_URL']
     headers =  { 'X-TrackerToken': api_key }
 
-def projects():
+def get_projects():
     url = base_url.format('projects')
     response = get(url, headers = headers)
+    project_ids = map_project_ids(response.json())
+    project_names = map_project_names(response.json())
+    return [{'project_ids': project_ids}, {'project_names': project_names}]
 
-    return response.json()
+# TODO: Refactor
+def map_project_ids(projects):
+    return [project['id'] for project in projects if 'id' in project]
+
+def map_project_names(projects):
+    return [project['name'] for project in projects if 'name' in project]
