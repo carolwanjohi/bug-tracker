@@ -24,7 +24,7 @@ def get_projects():
 def get_unscheduled_bug_cards(project_ids):
     combined_list = []
     for project_id in project_ids:
-        url = base_url.format('projects/'+str(project_id)+'/stories?with_story_type=bug&with_state=unscheduled')
+        url = base_url.format('projects/'+str(project_id)+'/stories?with_story_type=bug')
         response = get(url, headers = headers)
         combined_list.extend(response.json())
         len(combined_list)
