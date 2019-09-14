@@ -31,4 +31,4 @@ def index():
 
     done_bugs = filter_bugs_states(bugs_found, done_bugs_states)
     
-    return render_template('index.html', title = title, projects = done_bugs )
+    return render_template('index.html', title = title, unstarted = unstarted_bugs, inporgess = inporgess_bugs, done = done_bugs )
