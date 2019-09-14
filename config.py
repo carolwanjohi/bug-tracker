@@ -1,11 +1,17 @@
 import os
+from os.path import join, dirname
+from dotenv import load_dotenv
 
 class Config:
     '''
     General configuration parent class
     '''
-    PIVOTAL_BASE_URL = 'https://www.pivotaltracker.com/services/v5/projects/{}'
-    API_TOKEN = os.environ.get('TOKEN')
+    # Get env file where the Pivotal token is
+    dotenv_path = join(dirname(__file__), '.env')
+    load_dotenv(dotenv_path)
+    API_TOKEN = os.getenv('PIVOTAL_TOKEN')
+
+    PIVOTAL_BASE_URL = 'https://www.pivotaltracker.com/services/v5/{}'
 
 class ProdConfig(Config):
     '''

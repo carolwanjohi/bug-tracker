@@ -1,4 +1,5 @@
 import urllib.request,json
+from requests import get
 
 # Getting api key
 api_key = None
@@ -14,13 +15,6 @@ def configure_request(app):
 def projects():
     url = base_url.format('projects')
     headers =  { 'X-TrackerToken': api_key }
-    request = urllib.request.Request(url, headers)
-    response = urllib.request.urlopen(request)
-    # with urllib.request.urlopen(request) as response:
-        # project_data = response.read()
-        # print('project_data', project_data)
-        # project_data_response = json.loads(project_data)
+    response = get(url, headers = headers)
 
-    # print('project_data_response', project_data_response)
-
-    return 'more to come'
+    return response.json()
