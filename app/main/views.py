@@ -2,6 +2,7 @@ from flask import render_template,request,redirect,url_for,abort
 from . import main
 from ..requests import get_projects, get_unscheduled_bug_cards
 from ..utils import map_key_values, filter_bugs_states
+from datetime import datetime
 
 # Views
 @main.route('/')
@@ -30,5 +31,7 @@ def index():
     done_bugs_states = ['delivered', 'accepted']
 
     done_bugs = filter_bugs_states(bugs_found, done_bugs_states)
+
+    current_year = datetime.now().year
     
-    return render_template('index.html', title = title, unstarted = unstarted_bugs, inporgess = inporgess_bugs, done = done_bugs )
+    return render_template('index.html', title = title, unstarted = unstarted_bugs, inporgess = inporgess_bugs, done = done_bugs, year = current_year )
