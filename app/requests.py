@@ -19,13 +19,14 @@ def configure_request(app):
 def get_projects():
     url = base_url.format('projects')
     response = get(url, headers = headers)
-    project_ids = map_project_ids(response.json())
-    project_names = map_project_names(response.json())
-    return [{'project_ids': project_ids}, {'project_names': project_names}]
+    return response.json()
 
-# TODO: Refactor
-def map_project_ids(projects):
-    return [project['id'] for project in projects if 'id' in project]
-
-def map_project_names(projects):
-    return [project['name'] for project in projects if 'name' in project]
+def get_unscheduled_bug_cards(project_ids):
+    combined_list = []
+    for project_id in project_ids:
+        url = base_url.format('projects/'+str(project_id)+'/stories?with_story_type=bug&with_state=unscheduled')
+        response = get(url, headers = headers)
+        combined_list.extend(response.json())
+        len(combined_list)
+    return combined_list
+    
