@@ -1,1 +1,6 @@
 /*Styles for the home page*/
+.bug-section-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

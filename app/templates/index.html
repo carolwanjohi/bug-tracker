@@ -5,12 +5,28 @@
 
     <title> {{ title }} </title>
 
-    <div class="container">
+    <head>
+        <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/index.css') }}">
+    </head>
 
-        <h1>Home Page</h1>
+    <body>
+            <div class="container-fluid">
 
-        <p>{{ projects }}</p>
-
-    </div>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <strong class='bug-section-title'>Unstarted</strong>
+                        </div>
+            
+                        <div class="col-md-4">
+                            <strong class='bug-section-title'>Started</strong>
+                        </div>
+            
+                        <div class="col-md-4">
+                            <strong class='bug-section-title'>Done</strong>
+                        </div>
+                    </div>
+            
+                </div>
+    </body>
 
 {% endblock %}
