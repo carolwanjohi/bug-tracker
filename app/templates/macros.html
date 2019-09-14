@@ -1,7 +1,7 @@
 {%macro displayBugInfo(bug_list)%}
     {%for bug in bug_list%}
-        <li>
-            <a href="{{ bug.url }}" target="_blank">#{{ bug.id }}</a> {{ bug.name }}
+        <li class='list-group-item'>
+            <p><a href="{{ bug.url }}" target="_blank">#{{ bug.id }}</a> {{ bug.name }}</p>
         </li>
     {%endfor%}
 {%endmacro%}
