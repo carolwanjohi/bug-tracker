@@ -29,3 +29,8 @@ Make script executable: chmod a+x start.sh
 Run the script to start the app: ./start.sh 
 ```
 
+* create `.env` file for saving API creds
+```
+Create the file: touch .env
+Add in th file: TOKEN='<Pivotal_Api_Token>'
+```
