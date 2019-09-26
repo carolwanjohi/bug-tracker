@@ -12,10 +12,10 @@ def convert_to_bug_card_object(list_of_dictionary):
 
     for bug_card in list_of_dictionary:
 
-        id = bug_card.get('id')
-        name = bug_card.get('name')
-        url = bug_card.get('url')
+        title = bug_card.get('id')
+        title_link = bug_card.get('url')
+        text = bug_card.get('name')
 
-        bug_card_list.append(BugCard(id, name, url))
+        bug_card_list.append(BugCard(title, title_link, text))
     
     return bug_card_list
