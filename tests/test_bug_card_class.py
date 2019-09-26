@@ -20,6 +20,6 @@ class BugCardTest(unittest.TestCase):
         self.assertTrue(isinstance(self.new_bug_card,BugCard))
 
     def test_init(self):
-        self.assertEqual(self.new_bug_card.id, 1927)
-        self.assertEqual(self.new_bug_card.name,'Bug Card Name')
-        self.assertEqual(self.new_bug_card.url,'https//card-url.com')
+        self.assertEqual(self.new_bug_card.title, 1927)
+        self.assertEqual(self.new_bug_card.title_link,'Bug Card Name')
+        self.assertEqual(self.new_bug_card.text,'https//card-url.com')
