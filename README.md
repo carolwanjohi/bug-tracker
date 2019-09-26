@@ -54,3 +54,4 @@ SLACK_WEBHOOK='<WEBHOOK_URL>'
 * [Slack - Legacy Tokens](https://api.slack.com/custom-integrations/legacy-tokens)
 * [Slack - Slack Apps](https://api.slack.com/slack-apps)
 * [Slack - Incoming Webhooks](https://api.slack.com/incoming-webhooks)
+* [Slack - Message Formatting](https://api.slack.com/docs/message-formatting)
