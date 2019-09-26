@@ -29,8 +29,20 @@ Make script executable: chmod a+x start.sh
 Run the script to start the app: ./start.sh 
 ```
 
-* create `.env` file for saving API creds
+* create [slack webhook](https://api.slack.com/incoming-webhooks)
+
+* create `.env` file in the root directory of the project
+
+* add the following information in it
 ```
-Create the file: touch .env
-Add in th file: TOKEN='<Pivotal_Api_Token>'
+TOKEN='<Pivotal_Api_Token>'
+SLACK_WEBHOOK='<WEBHOOK_URL>'
 ```
+
+### Interesting reads
+* [Reading Environment Variables From .Env File In Python](https://robinislam.me/blog/reading-environment-variables-in-python/)
+* [Installing packages using pip and virtual environments](https://packaging.python.org/guides/installing-using-pip-and-virtual-environments/)
+* [Requirements Files](https://pip.pypa.io/en/latest/user_guide/#requirements-files)
+* [Slack - Legacy Tokens](https://api.slack.com/custom-integrations/legacy-tokens)
+* [Slack - Slack Apps](https://api.slack.com/slack-apps)
+* [Slack - Incoming Webhooks](https://api.slack.com/incoming-webhooks)
