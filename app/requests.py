@@ -10,11 +10,15 @@ base_url = None
 # Getting the headers
 headers = None
 
+# Getting the slack webhook
+webhook = None
+
 def configure_request(app):
-    global api_key, base_url, headers
+    global api_key, base_url, headers, webhook
     api_key = app.config['API_TOKEN']
     base_url = app.config['PIVOTAL_BASE_URL']
     headers =  { 'X-TrackerToken': api_key }
+    webhook = app.config['WEBHOOK_URL']
 
 def get_projects():
     url = base_url.format('projects')
@@ -29,4 +33,3 @@ def get_unscheduled_bug_cards(project_ids):
         combined_list.extend(response.json())
         len(combined_list)
     return combined_list
-    

@@ -10,8 +10,8 @@ class Config:
     dotenv_path = join(dirname(__file__), '.env')
     load_dotenv(dotenv_path)
     API_TOKEN = os.getenv('PIVOTAL_TOKEN')
-
     PIVOTAL_BASE_URL = 'https://www.pivotaltracker.com/services/v5/{}'
+    WEBHOOK_URL = os.getenv('WEBHOOK_URL')
 
 class ProdConfig(Config):
     '''
