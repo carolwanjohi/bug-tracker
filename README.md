@@ -29,6 +29,14 @@ Make script executable: chmod a+x start.sh
 Run the script to start the app: ./start.sh 
 ```
 
+* create script for running the tests in the application
+```
+Create the script: touch test.sh
+Add in the script: python3.6 manage.py test
+Make script executable: chmod a+x test.sh
+Run the script to start the app: ./test.sh 
+```
+
 * create [slack webhook](https://api.slack.com/incoming-webhooks)
 
 * create `.env` file in the root directory of the project
